@@ -91,12 +91,6 @@ components:
     type: Label
     layout_properties: {x: 136.1874950416386, y: 72.18749694898725, width: 510.8000183105469}
     name: label_7_copy_3
-  - properties: {text: '   No Wallet KYC Required to pay using UPI on G-Wallet.',
-      align: left, bold: false, spacing_above: large, spacing_below: large, background: white,
-      font_size: 15, italic: true}
-    type: Label
-    layout_properties: {x: 144.27502136304975, y: 139.69999389722943, width: 391.98798779296874}
-    name: label_6
   - properties: {height: 263.1999816894531, source: 'https://www.temenos.com/wp-content/uploads/2023/05/Genie-Wallet-pic1-768x432.png'}
     type: Image
     layout_properties: {x: 1227.25, y: 14.953125, width: 411.1875}
