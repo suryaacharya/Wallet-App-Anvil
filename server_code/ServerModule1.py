@@ -140,7 +140,6 @@ def update_all_rows(user,e_money_value):
     print("hi this is server code")
     print(f"E-money: {e_money_value}")
     matching_rows = app_tables.accounts.search(user=user)
-    
     for row in matching_rows:
         row['e_money'] =e_money_value
         row.update()
