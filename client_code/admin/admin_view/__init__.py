@@ -190,7 +190,7 @@ class admin_view(admin_viewTemplate):
 
                 # Log changes to 'actions' table if changes were made
                 if changes_made:
-                    self.log_action(self.user['username'], changes_made)
+                    self.log_action(username, changes_made)
 
 
                 alert("Changes saved successfully.", title="Success")
@@ -277,10 +277,11 @@ class admin_view(admin_viewTemplate):
         if changes:
             timestamp = datetime.now()
             app_tables.actions.add_row(
-                username= self.user_data['username'],
+                username= username, 
                 last_login=last_login,
                 changes=", ".join(changes),
                 date=timestamp,
+                admin_email=user['email']
             )
   
     def link_1_click(self, **event_args):
