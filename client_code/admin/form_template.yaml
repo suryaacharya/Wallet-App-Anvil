@@ -9,227 +9,190 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_2
-    layout_properties: {grid_position: 'REQMXD,FYVLJA GAPIYV,MLNZHN'}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_1
-    layout_properties: {grid_position: 'REQMXD,FYVLJA PGXHQO,NCIJBB'}
-  - name: xy_panel_1
-    properties: {height: 286, spacing_above: large, spacing_below: large, background: '#1e75b9'}
-    type: XYPanel
-    layout_properties: {grid_position: 'REQMXD,FYVLJA CCUUOL,RQZJLC'}
-    components:
-    - name: canvas_1
-      properties: {height: 100}
-      type: Canvas
-      layout_properties: {x: 38.45001678541303, y: 17.21249084547162, width: 200}
-    - name: label_7
-      properties: {text: "Welcome to \n", font_size: 37, align: left, bold: false,
-        foreground: white, spacing_below: none}
-      type: Label
-      layout_properties: {x: 138.612484741956, y: 29.900006104260683, width: 547.0499877929688}
-    - name: label_7_copy_3
-      properties: {text: 'G-Wallet Payment App
-
-          ', font_size: 41, align: left, bold: true, foreground: white, font: a, spacing_above: none,
-        spacing_below: none}
-      type: Label
-      layout_properties: {x: 136.1874950416386, y: 72.18749694898725, width: 510.8000183105469}
-    - name: label_6
-      properties: {text: '   No Wallet KYC Required to pay using UPI on G-Wallet.',
-        align: left, bold: false, spacing_above: large, spacing_below: large, background: white,
-        font_size: 15, italic: true}
-      type: Label
-      layout_properties: {x: 144.27502136304975, y: 139.69999389722943, width: 391.98798779296874}
-    - name: image_3
-      properties: {height: 263.1999816894531, source: 'https://www.temenos.com/wp-content/uploads/2023/05/Genie-Wallet-pic1-768x432.png'}
-      type: Image
-      layout_properties: {x: 1227.25, y: 14.953125, width: 411.1875}
-    - name: flow_panel_1
-      properties: {}
-      type: FlowPanel
-      layout_properties: {x: 0, y: 0, width: 477.013916015625}
-      components:
-      - name: image_1_copy
-        properties: {role: null, vertical_align: center, height: 44.80000305175781,
-          tooltip: '', border: '', foreground: '', visible: true, display_mode: shrink_to_fit,
-          spacing_above: small, source: _/theme/GW-logo.jpg, spacing_below: small,
-          background: white, horizontal_align: right}
-        type: Image
-        layout_properties: {width: 89.19999694824219}
-      - name: label_7_copy_2
-        properties: {text: 'G-Wallet         ', font_size: 25, align: left, bold: true,
-          font: a, italic: false, underline: false, foreground: black}
-        type: Label
-        layout_properties: {}
-      - name: spacer_4
-        properties: {height: 46.75}
-        type: Spacer
-        layout_properties: {width: 359}
-      - name: column_panel_1
-        properties: {background: white, col_widths: '{"FKFVNM":26,"LDONGM":11,"EKRNNM":9,"CLCQWK":2,"DAOHBK":12}',
-          col_spacing: medium}
-        type: ColumnPanel
-        layout_properties: {width: 833.1500244140625, expand: true}
-        components:
-        - name: link_8_copy
-          properties: {text: Home, align: right, bold: false, foreground: '#000',
-            font_size: 15}
-          type: Link
-          layout_properties: {grid_position: 'JXFFNM,FKFVNM'}
-          event_bindings: {click: link_8_copy_click}
-        - name: link_9_copy
-          properties: {text: About, align: center, bold: false, foreground: black,
-            font_size: 15, col_spacing: tiny}
-          type: Link
-          layout_properties: {grid_position: 'JXFFNM,LDONGM'}
-        - name: link_10_copy
-          properties: {text: User Support, bold: false, align: center, foreground: black,
-            font_size: 15, background: white}
-          type: Link
-          layout_properties: {grid_position: 'JXFFNM,EKRNNM', full_width_row: true}
-          event_bindings: {click: link_10_copy_click}
-        - name: button_8
-          properties: {text: Logout, role: filled-button, background: '#1d86da'}
-          type: Button
-          layout_properties: {grid_position: 'JXFFNM,DAOHBK'}
-          event_bindings: {click: button_8_click}
-      - name: xy_panel_1_copy
-        properties: {height: 286, spacing_above: large, spacing_below: large, background: '#1e75b9'}
-        type: XYPanel
-        components:
-        - name: canvas_1_copy
-          properties: {height: 100}
-          type: Canvas
-          layout_properties: {x: 38.45001678541303, y: 17.21249084547162, width: 200}
-        - name: label_7_copy
-          properties: {text: "Welcome to \n", font_size: 37, align: left, bold: false,
-            foreground: white, spacing_below: none}
-          type: Label
-          layout_properties: {x: 138.612484741956, y: 29.900006104260683, width: 547.0499877929688}
-        - name: label_7_copy_3_copy
-          properties: {text: 'G-Wallet Payment App
-
-              ', font_size: 41, align: left, bold: true, foreground: white, font: a,
-            spacing_above: none, spacing_below: none}
-          type: Label
-          layout_properties: {x: 136.1874950416386, y: 72.18749694898725, width: 510.8000183105469}
-        - name: label_6_copy
-          properties: {text: '   No Wallet KYC Required to pay using UPI on G-Wallet.',
-            align: left, bold: false, spacing_above: large, spacing_below: large,
-            background: white, font_size: 15, italic: true}
-          type: Label
-          layout_properties: {x: 144.27502136304975, y: 139.69999389722943, width: 391.98798779296874}
-        - name: image_3_copy
-          properties: {height: 263.1999816894531, source: 'https://www.temenos.com/wp-content/uploads/2023/05/Genie-Wallet-pic1-768x432.png'}
-          type: Image
-          layout_properties: {x: 1227.25, y: 14.953125, width: 411.1875}
   - name: label_1
     properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
       visible: true, text: '', font_size: 20, font: '', spacing_above: small, icon_align: left,
       spacing_below: small, italic: false, background: '#3FE5FF', bold: true, underline: false,
       icon: ''}
     type: Label
-    layout_properties: {grid_position: 'REQMXD,WVJQNQ AMGGAP,KPSYQH'}
-  - type: ColumnPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{"VGVFIV":25,"FORECV":10,"DHQSXC":25}',
-      spacing_below: small, background: ''}
-    name: outlined_card_1
-    layout_properties: {grid_position: 'REQMXD,WVJQNQ YLCVRK,YAMJNB'}
+    layout_properties: {grid_position: 'NFXCQB,NPGSAX', slot: default, full_width_row: true}
+  - name: flow_panel_1
+    properties: {role: null, vertical_align: full, spacing: medium, align: left, tooltip: '',
+      border: '', foreground: '', visible: true, spacing_above: small, spacing_below: small,
+      background: ''}
+    type: FlowPanel
+    layout_properties: {grid_position: 'NFXCQB,NVKWKB', full_width_row: true, slot: default}
     components:
-    - type: Button
-      properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: User Management, font_size: 15, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#3FE5FF', bold: true, underline: false, icon: ''}
-      name: button_1
-      layout_properties: {grid_position: 'YAMGBP,QVZJRW'}
-      event_bindings: {click: button_1_click}
-    - type: Button
-      properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '#000000', visible: true, text: Account Balance Management, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#3FE5FF', bold: true, underline: false, icon: ''}
-      name: button_5
-      layout_properties: {grid_position: 'YAMGBP,GQOBVK'}
-      event_bindings: {click: button_5_click}
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '#000000', visible: true, text: Report and Analysis, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#3FE5FF', bold: true, underline: false, icon: ''}
-      name: button_3
-      layout_properties: {grid_position: 'BTGZKK,NMCAIH'}
-      event_bindings: {click: button_3_click}
-    - type: Button
-      properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '', visible: true, text: Transaction Monitoring, font_size: 15,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#3FE5FF', bold: true, underline: false, icon: ''}
-      name: button_2
-      layout_properties: {grid_position: 'BTGZKK,WWTXPP'}
-      event_bindings: {click: button_2_click}
-    - type: Button
-      properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
-        foreground: '#000000', visible: true, text: Security Control, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#3FE5FF', bold: true, underline: false, icon: ''}
-      name: button_6
-      layout_properties: {grid_position: 'QXQZMX,VGVFIV'}
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_7
-      layout_properties: {grid_position: 'QXQZMX,FORECV'}
-    - type: Button
-      properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-        foreground: '#000000', visible: true, text: Audit Trail, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#3FE5FF', bold: true, underline: false, icon: ''}
-      name: button_7
-      layout_properties: {grid_position: 'QXQZMX,DHQSXC'}
-      event_bindings: {click: button_7_click}
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: '#000000', visible: true, text: User Support, font_size: null,
-        font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '#3FE5FF', bold: true, underline: false, icon: ''}
-      name: button_4
-      layout_properties: {grid_position: 'EUKCJF,XIIBNB'}
-      event_bindings: {click: button_4_click}
-  - name: outlined_card_1_copy
-    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: none, spacing_above: none, col_widths: '{"VMILPR":8,"FDANOO":15,"HAKDVS":15}',
-      spacing_below: none, background: 'theme:On Surface Variant'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'REQMXD,FYVLJA YRHAKU,MLOCQR', full_width_row: true}
-    components:
-    - name: label_1_copy
-      properties: {text: CopyRight2023@Gwallet, align: left, bold: true, font_size: 16,
-        visible: true, role: input-prompt, foreground: 'theme:On Primary'}
+    - name: image_1_copy
+      properties: {role: null, vertical_align: center, height: 44.80000305175781,
+        tooltip: '', border: '', foreground: '', visible: true, display_mode: shrink_to_fit,
+        spacing_above: small, source: _/theme/GW-logo.jpg, spacing_below: small, background: white,
+        horizontal_align: right}
+      type: Image
+      layout_properties: {width: 89.19999694824219}
+    - name: label_7_copy_2
+      properties: {text: 'G-Wallet         ', font_size: 25, align: left, bold: true,
+        font: a, italic: false, underline: false, foreground: black}
       type: Label
-      layout_properties: {grid_position: 'XSXLAE,XVKBKL'}
-    - name: label_2
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: Disclaimer, font_size: 18, font: '', spacing_above: small,
-        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-        underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'XSXLAE,VMILPR'}
-    - name: label_3
-      properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: Privacy Policy, font_size: 18, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'XSXLAE,FDANOO'}
-    - name: label_4
-      properties: {role: null, align: right, tooltip: '', border: '', foreground: 'theme:On
-          Primary', visible: true, text: Code Of Commitment, font_size: 18, font: '',
-        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
-        background: '', bold: true, underline: false, icon: ''}
-      type: Label
-      layout_properties: {grid_position: 'XSXLAE,HAKDVS'}
+      layout_properties: {}
+    - name: spacer_4
+      properties: {height: 46.75}
+      type: Spacer
+      layout_properties: {width: 359}
+    - name: column_panel_1
+      properties: {background: white, col_widths: '{"FKFVNM":26,"LDONGM":11,"EKRNNM":9,"CLCQWK":2,"DAOHBK":12}',
+        col_spacing: medium}
+      type: ColumnPanel
+      layout_properties: {width: 833.1500244140625, expand: true}
+      components:
+      - name: link_8_copy
+        properties: {text: Home, align: right, bold: false, foreground: '#000', font_size: 15}
+        type: Link
+        layout_properties: {grid_position: 'JXFFNM,FKFVNM'}
+        event_bindings: {click: link_8_copy_click}
+      - name: link_9_copy
+        properties: {text: About, align: center, bold: false, foreground: black, font_size: 15,
+          col_spacing: tiny}
+        type: Link
+        layout_properties: {grid_position: 'JXFFNM,LDONGM'}
+      - name: link_10_copy
+        properties: {text: User Support, bold: false, align: center, foreground: black,
+          font_size: 15, background: white}
+        type: Link
+        layout_properties: {grid_position: 'JXFFNM,EKRNNM', full_width_row: true}
+        event_bindings: {click: link_10_copy_click}
+      - name: button_8
+        properties: {text: Logout, role: filled-button, background: '#1d86da'}
+        type: Button
+        layout_properties: {grid_position: 'JXFFNM,DAOHBK'}
+        event_bindings: {click: button_8_click}
+    - name: xy_panel_1_copy
+      properties: {height: 286, spacing_above: large, spacing_below: large, background: '#1e75b9'}
+      type: XYPanel
+      components:
+      - name: canvas_1_copy
+        properties: {height: 100}
+        type: Canvas
+        layout_properties: {x: 38.45001678541303, y: 17.21249084547162, width: 200}
+      - name: label_7_copy
+        properties: {text: "Welcome to \n", font_size: 37, align: left, bold: false,
+          foreground: white, spacing_below: none}
+        type: Label
+        layout_properties: {x: 138.612484741956, y: 29.900006104260683, width: 547.0499877929688}
+      - name: label_7_copy_3_copy
+        properties: {text: 'G-Wallet Payment App
+
+            ', font_size: 41, align: left, bold: true, foreground: white, font: a,
+          spacing_above: none, spacing_below: none}
+        type: Label
+        layout_properties: {x: 136.1874950416386, y: 72.18749694898725, width: 510.8000183105469}
+      - name: label_6_copy
+        properties: {text: '   No Wallet KYC Required to pay using UPI on G-Wallet.',
+          align: left, bold: false, spacing_above: large, spacing_below: large, background: white,
+          font_size: 15, italic: true}
+        type: Label
+        layout_properties: {x: 144.27502136304975, y: 139.69999389722943, width: 391.98798779296874}
+      - name: image_3_copy
+        properties: {height: 263.1999816894531, source: 'https://www.temenos.com/wp-content/uploads/2023/05/Genie-Wallet-pic1-768x432.png'}
+        type: Image
+        layout_properties: {x: 1227.25, y: 14.953125, width: 411.1875}
+- name: label_4
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: 'theme:On
+      Primary', visible: true, text: Code Of Commitment, font_size: 18, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: true, underline: false, icon: ''}
+  type: Label
+  layout_properties: {grid_position: 'XSXLAE,HAKDVS', slot: default}
+- name: outlined_card_1_copy
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: none, spacing_above: none, col_widths: '{"VMILPR":8,"FDANOO":15}',
+    spacing_below: none, background: 'theme:On Surface Variant'}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'REQMXD,FYVLJA YRHAKU,MLOCQR', full_width_row: true,
+    slot: default}
+  components:
+  - name: label_1_copy
+    properties: {text: CopyRight2023@Gwallet, align: left, bold: true, font_size: 16,
+      visible: true, role: input-prompt, foreground: 'theme:On Primary'}
+    type: Label
+    layout_properties: {grid_position: 'XSXLAE,XVKBKL'}
+  - name: label_2
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: Disclaimer, font_size: 18, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'XSXLAE,VMILPR'}
+  - name: label_3
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary', visible: true, text: Privacy Policy, font_size: 18, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    type: Label
+    layout_properties: {grid_position: 'XSXLAE,FDANOO'}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: none, spacing_above: small, col_widths: '{"VGVFIV":25,"FORECV":10,"DHQSXC":25}',
+    spacing_below: small, background: ''}
+  name: outlined_card_1
+  layout_properties: {grid_position: 'REQMXD,WVJQNQ YLCVRK,VNJEPA', slot: default}
+  components:
+  - type: Button
+    properties: {role: tonal-button, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: User Management, font_size: 15, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#3FE5FF', bold: true, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'YAMGBP,QVZJRW'}
+    event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '#000000', visible: true, text: Account Balance Management, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#3FE5FF', bold: true, underline: false, icon: ''}
+    name: button_5
+    layout_properties: {grid_position: 'YAMGBP,GQOBVK'}
+    event_bindings: {click: button_5_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#000000', visible: true, text: Report and Analysis, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#3FE5FF', bold: true, underline: false, icon: ''}
+    name: button_3
+    layout_properties: {grid_position: 'BTGZKK,NMCAIH'}
+    event_bindings: {click: button_3_click}
+  - type: Button
+    properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Transaction Monitoring, font_size: 15,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#3FE5FF', bold: true, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'BTGZKK,WWTXPP'}
+    event_bindings: {click: button_2_click}
+  - type: Button
+    properties: {role: null, align: right, tooltip: '', border: '', enabled: true,
+      foreground: '#000000', visible: true, text: Security Control, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#3FE5FF', bold: true, underline: false, icon: ''}
+    name: button_6
+    layout_properties: {grid_position: 'QXQZMX,VGVFIV'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_7
+    layout_properties: {grid_position: 'QXQZMX,FORECV'}
+  - type: Button
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '#000000', visible: true, text: Audit Trail, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#3FE5FF', bold: true, underline: false, icon: ''}
+    name: button_7
+    layout_properties: {grid_position: 'QXQZMX,DHQSXC'}
+    event_bindings: {click: button_7_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#000000', visible: true, text: User Support, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#3FE5FF', bold: true, underline: false, icon: ''}
+    name: button_4
+    layout_properties: {grid_position: 'EUKCJF,XIIBNB'}
+    event_bindings: {click: button_4_click}
