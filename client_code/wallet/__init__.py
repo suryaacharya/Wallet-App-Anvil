@@ -82,6 +82,7 @@ class wallet(walletTemplate):
         self.label_bank_details_error.text = "Bank details saved successfully."
       else:
         self.label_bank_details_error.text = "Please fill in all bank details."
+      open_form('wallet',user= self.user)
 
     def link_2_click(self, **event_args):
       """This method is called when the link is clicked"""
