@@ -14,7 +14,10 @@ class auto_top_up(auto_top_upTemplate):
     self.init_components(**properties)
     user_account_numbers = anvil.server.call('get_user_account_numbers', self.user['username'])
     self.dropdown_account_numbers.items = user_account_numbers
-    self.button_2.visible= False
+    if self.user['top_up']== True:
+      self.button_1.visible= False
+    else:
+      self.button_2.visible= False
 
 
 
@@ -22,21 +25,45 @@ class auto_top_up(auto_top_upTemplate):
   def button_1_click(self, **event_args):
     self.user['top_up']= True
     self.user.update()
-    user =app_tables.users.get(top_up=True)
-    if user is not None and user['top_up']:
+    self.button_1.visible = False
+    self.button_2.visible = True
+    if self.user['top_up'] is not None and self.user['top_up']== True:
       for_emoney = anvil.server.call('get_accounts_emoney_with_user',self.user['username'])
       money_in_emoney= for_emoney['e_money']
       threshold =2000
+      print("hello")
       if float(money_in_emoney)< threshold:
         final= str(float(money_in_emoney) + 5000)
-        if self.deduct_currencies(final):
+        print("hi there")
+        if self.validate()== True:
+          print("hi I'm sending user value")
+          self.deduct_currencies(final)
           anvil.server.call('update_all_rows',self.user['username'], final)
           self.button_1.visible = False
           self.button_2.visible = True
+        else:
+          alert("Insufficient Funds put money in your casa account")
       else:
         return f"E-wallet balance ({money_in_emoney}) is above the threshold. No top-up needed."
     
-
+  def validate(self):
+    acc= self.dropdown_account_numbers.selected_value
+    currencies_table = app_tables.currencies.get(casa=int(acc))
+    conversion_usd = float(currencies_table['money_usd'])*80
+    conversion_euro = float(currencies_table['money_euro'])*85
+    conversion_swis = float(currencies_table['money_swis']) * 90
+    conversion_inr = float(currencies_table['money_inr']) * 1
+    if conversion_usd > 5000:
+        return True
+    elif conversion_euro  > 5000:
+        return True
+    elif conversion_swis > 5000:
+        return True
+    elif conversion_inr > 5000:
+        return True
+    else:
+        return False
+  
   def deduct_currencies(self, amount):
     acc= self.dropdown_account_numbers.selected_value
     currencies_table = app_tables.currencies.get(casa=int(acc))

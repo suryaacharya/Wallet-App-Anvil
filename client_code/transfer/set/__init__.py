@@ -15,6 +15,7 @@ class set(setTemplate):
 
   def outlined_button_1_click(self, **event_args):
     setter = anvil.server.call('user_detail', self.user['username'],self.text_box_1.text)
+    open_form('transfer.set',user= self.user)
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
