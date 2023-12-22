@@ -57,7 +57,7 @@ class deposit(depositTemplate):
 
                 user_currency.update()
 
-                # Convert deposited amount to INR
+                # #Convert deposited amount to INR
                 # inr_value = money_value
                 # if selected_symbol != '₹':
                 #     # Define exchange rates
@@ -86,7 +86,7 @@ class deposit(depositTemplate):
                     transaction_type="Deposit"
                 )
 
-                # self.label_2.text = "Money added successfully to the account. Remaining limit: {}".format(remaining_limit)
+                self.label_2.text = "Money added successfully to the account." #Remaining limit: {}".format(remaining_limit)
             else:
                 self.label_2.text = "Error: No matching accounts found for the user or invalid account number."
         else:

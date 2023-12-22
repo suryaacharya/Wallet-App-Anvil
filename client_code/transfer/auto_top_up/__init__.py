@@ -58,7 +58,7 @@ class auto_top_up(auto_top_upTemplate):
         currencies_table.update()
     else:
       alert("insufficient funds")
-    
+
 
   def button_2_click(self, **event_args):
     self.user['top_up']= False
