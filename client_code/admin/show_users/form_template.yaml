@@ -74,8 +74,8 @@ components:
     layout_properties: {grid_position: 'QCVRZO,RIKTRC'}
   - type: Button
     properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
-      foreground: '#000000', visible: true, text: '', font_size: null, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '#0770FF',
+      foreground: white, visible: true, text: '', font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '#1d86da',
       bold: true, underline: false, icon: 'fa:search'}
     name: button_2
     layout_properties: {grid_position: 'QCVRZO,ISAALN'}
@@ -90,21 +90,21 @@ components:
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Username:', font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      icon_align: left, spacing_below: small, italic: true, background: '', bold: true,
       underline: false, icon: ''}
     name: label_2
     layout_properties: {grid_position: 'KUZTVG,WZJKBK'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Phone Number:', font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      icon_align: left, spacing_below: small, italic: true, background: '', bold: true,
       underline: false, icon: ''}
     name: label_3
     layout_properties: {grid_position: 'KUZTVG,FOXXET'}
   - type: Label
     properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
       visible: true, text: 'Email:', font_size: 18, font: '', spacing_above: small,
-      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      icon_align: left, spacing_below: small, italic: true, background: '', bold: true,
       underline: false, icon: ''}
     name: label_4
     layout_properties: {grid_position: 'KUZTVG,RQGOHG'}
