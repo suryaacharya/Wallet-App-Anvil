@@ -19,3 +19,9 @@ components:
   layout_properties: {grid_position: 'VMNZCM,XOKHMH'}
   data_bindings:
   - {property: text, code: 'self.item[''changes'']', writeback: false}
+- name: label_4
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'VMNZCM,RPUGIJ'}
+  data_bindings:
+  - {property: text, code: 'self.item[''date'']', writeback: false}
