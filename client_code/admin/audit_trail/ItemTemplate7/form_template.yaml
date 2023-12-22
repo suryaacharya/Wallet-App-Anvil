@@ -2,19 +2,28 @@ is_package: true
 container: {type: ColumnPanel}
 components:
 - name: label_1
-  properties: {text: ''}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: white, bold: false, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'VMNZCM,MVVFYF'}
   data_bindings:
   - {property: text, code: 'self.item[''username'']', writeback: false}
 - name: label_2
-  properties: {}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: white, bold: false, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'VMNZCM,OBDOSR'}
   data_bindings:
   - {property: text, code: 'self.item[''last_login'']', writeback: false}
 - name: label_3
-  properties: {}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: black,
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: white, bold: false, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {grid_position: 'VMNZCM,XOKHMH'}
   data_bindings:
