@@ -11,7 +11,7 @@ services:
 startup: {type: form, module: Home}
 package_name: Wallet_App
 allow_embedding: false
-name: Clone of Wallet App
+name: Wallet App
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 startup_form: null
