@@ -19,3 +19,5 @@ class ItemTemplate6(ItemTemplate6Template):
         open_form('admin.set_limit', user= self.user, user_data=selected_user)
 
     # Any code you write here will run before the form opens.
+
+ 
