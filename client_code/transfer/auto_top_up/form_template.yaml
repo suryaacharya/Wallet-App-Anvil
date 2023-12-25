@@ -150,6 +150,14 @@ components:
     type: Button
     layout_properties: {grid_position: 'MGTKGN,EGKDCV'}
     event_bindings: {click: button_2_click}
+  - name: spacer_4
+    properties: {height: 49}
+    type: Spacer
+    layout_properties: {grid_position: 'ZPEGMC,JJBFQA'}
+  - name: label_5
+    properties: {align: center}
+    type: Label
+    layout_properties: {grid_position: 'XOBKOM,MRIZWR'}
   - name: spacer_3
     properties: {height: 297.74993896484375}
     type: Spacer

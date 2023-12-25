@@ -42,7 +42,7 @@ class auto_top_up(auto_top_upTemplate):
           self.button_1.visible = False
           self.button_2.visible = True
         else:
-          alert("Insufficient Funds put money in your casa account")
+          self.label_5.text = "Insufficient Funds put money in your casa account"
       else:
         return f"E-wallet balance ({money_in_emoney}) is above the threshold. No top-up needed."
     
@@ -84,7 +84,7 @@ class auto_top_up(auto_top_upTemplate):
         currencies_table['money_inr'] = str((conversion_inr - 5000) / 1)
         currencies_table.update()
     else:
-      alert("insufficient funds")
+      self.label_5.text = "Insufficient funds"
 
 
   def button_2_click(self, **event_args):
