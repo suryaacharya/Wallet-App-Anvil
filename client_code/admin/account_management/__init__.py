@@ -50,4 +50,7 @@ class account_management(account_managementTemplate):
     """This method is called when the button is clicked"""
     open_form('Home')
 
+  def button_3_click(self, **event_args):
+    open_form('admin')
+
  

@@ -237,6 +237,16 @@ components:
     type: Button
     layout_properties: {grid_position: 'NPRIVT,GRWXXL'}
     event_bindings: {click: button_1_click}
+  - type: Button
+    properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: white, visible: true, text: back, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '#1d86da',
+      bold: true, underline: false, icon: 'fa:backward'}
+    name: button_3
+    layout_properties:
+      col_widths: {}
+      grid_position: NPRIVT,QOXBLC
+    event_bindings: {click: button_3_click}
   - name: spacer_4
     properties: {height: 49.24993896484375}
     type: Spacer

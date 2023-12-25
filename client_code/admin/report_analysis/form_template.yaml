@@ -107,6 +107,16 @@ components:
   properties: {}
   name: plot_3
   layout_properties: {grid_position: 'PNJBTR,DWEMVH'}
+- type: Button
+  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: back, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: true, background: '#1d86da', bold: true,
+    underline: false, icon: 'fa:backward'}
+  name: button_3_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: KHPMXL,NANCNK
+  event_bindings: {click: button_3_copy_click}
 - type: ColumnPanel
   properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
     wrap_on: mobile, col_spacing: none, spacing_above: none, col_widths: '{"VMILPR":8,"FDANOO":15,"HAKDVS":15}',

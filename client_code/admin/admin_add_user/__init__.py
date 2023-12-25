@@ -114,3 +114,6 @@ class admin_add_user(admin_add_userTemplate):
   def button_8_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Home')
+
+  def button_3_click(self, **event_args):
+    open_form('admin.show_users')
