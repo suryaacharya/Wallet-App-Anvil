@@ -29,7 +29,7 @@ class e_wallet_to_e_wallet(e_wallet_to_e_walletTemplate):
         recieve = float(fore_money_sent['e_money']) 
         if(fore_money_sent['e_money']== None):
           anvil.server.call('update_rows_emoney_trasaction',wallet_id, str(0))
-        if (transfer_amount < 5) or (transfer_amount > fore_money_sent and 50000):
+        if (transfer_amount < 5) or (transfer_amount > 50000):
            app_tables.transactions.add_row(
                  user=self.user['username'],
                  e_wallet=f"{depositor_wallet_id} to {wallet_id}",
