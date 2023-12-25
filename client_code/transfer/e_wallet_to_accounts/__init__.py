@@ -104,7 +104,7 @@ class e_wallet_to_accounts(e_wallet_to_accountsTemplate):
                self.label_3.text = "Insufficient funds"
         else:
           self.label_3.text = "Error: Invalid currency symbol selected."
-      new_transaction = app_tables.transactions.add_row(
+        app_tables.transactions.add_row(
                 user=self.user['username'],
                 casa=int(acc),
                 e_wallet=wallet3,
