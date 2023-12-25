@@ -29,3 +29,6 @@ class user_support(user_supportTemplate):
   def link_8_copy_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('admin')
+
+  def button_3_click(self, **event_args):
+   open_form('admin')

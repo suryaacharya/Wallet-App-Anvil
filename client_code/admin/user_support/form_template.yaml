@@ -99,6 +99,16 @@ components:
   properties: {height: 32}
   name: spacer_6
   layout_properties: {grid_position: 'ZINEOD,HUPYVM'}
+- type: Button
+  properties: {role: outlined-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: white, visible: true, text: back, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: true, background: '#1d86da', bold: true,
+    underline: false, icon: 'fa:backward'}
+  name: button_3
+  layout_properties:
+    col_widths: {}
+    grid_position: NATPWF,ZLTCUZ
+  event_bindings: {click: button_3_click}
 - type: Spacer
   properties: {height: 32}
   name: spacer_5

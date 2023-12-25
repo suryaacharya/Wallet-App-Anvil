@@ -12,8 +12,7 @@ class account_management(account_managementTemplate):
     self.init_components(**properties)
     self.button_1.visible = False
     self.user =user
-    mail= self.user['email']
-    print(mail)
+    #print(mail)
     self.refresh_users()
 
   def refresh_users(self, username_filter=None):

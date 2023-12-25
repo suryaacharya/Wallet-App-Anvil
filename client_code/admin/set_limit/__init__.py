@@ -69,6 +69,5 @@ class set_limit(set_limitTemplate):
     open_form('Home')
 
   def button_3_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    open_form('admin.account_management')
     

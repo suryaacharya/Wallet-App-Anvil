@@ -52,3 +52,6 @@ class show_users(show_usersTemplate):
 
     def button_1_copy_click(self, **event_args):
      open_form('admin.admin_add_user')
+
+    def button_3_click(self, **event_args):
+      open_form('admin')

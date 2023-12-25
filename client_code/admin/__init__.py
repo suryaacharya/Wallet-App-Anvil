@@ -13,7 +13,6 @@ class admin(adminTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.user = user
-    mail = self.user['email']
     if user is not None:
             self.label_1.text = f"Welcome to Green Gate Financial, {user['username']}"
     else:
