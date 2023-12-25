@@ -30,6 +30,14 @@ class e_wallet_to_e_wallet(e_wallet_to_e_walletTemplate):
         if(fore_money_sent['e_money']== None):
           anvil.server.call('update_rows_emoney_trasaction',wallet_id, str(0))
         if (transfer_amount < 5) or (transfer_amount > 50000):
+           app_tables.transactions.add_row(
+                 user=self.user['username'],
+                 e_wallet=f"{depositor_wallet_id} to {wallet_id}",
+                 money=f"₹-{transfer_amount}",
+                 date=current_datetime,
+                 transaction_type="E-wallet to E-wallet",
+                 proof="failed"
+               )
            self.label_4.text = "Transfer amount should be between 5 and 50000 for a transfer Funds." 
         else:
            if float(fore_money_depositor['e_money']) < transfer_amount:
@@ -50,9 +58,10 @@ class e_wallet_to_e_wallet(e_wallet_to_e_walletTemplate):
              app_tables.transactions.add_row(
                  user=self.user['username'],
                  e_wallet=f"{depositor_wallet_id} to {wallet_id}",
-                 money=f"Transfer-{transfer_amount}",
+                 money=f"₹-{transfer_amount}",
                  date=current_datetime,
-                 transaction_type="E-wallet to E-wallet"
+                 transaction_type="E-wallet to E-wallet",
+                 proof="success"
                )
         if self.user['top_up'] is not None and self.user['top_up']== True:
           for_emoney = anvil.server.call('get_accounts_emoney_with_user',self.user['username'])
@@ -66,7 +75,7 @@ class e_wallet_to_e_wallet(e_wallet_to_e_walletTemplate):
               self.deduct_currencies(final)
               anvil.server.call('update_all_rows',self.user['username'], final)
             else:
-              alert("Insufficient Funds put money in your casa account")
+              self.label_4.text = "Insufficient Funds put money in your casa account"
           else:
             return f"E-wallet balance ({money_in_emoney}) is above the threshold. No top-up needed."
             
@@ -107,7 +116,7 @@ class e_wallet_to_e_wallet(e_wallet_to_e_walletTemplate):
         currencies_table['money_inr'] = str((conversion_inr - 5000) / 1)
         currencies_table.update()
       else:
-        alert("insufficient funds")
+        self.label_4.text = "Insufficient funds"
 
     def link_8_click(self, **event_args):
       """This method is called when the link is clicked"""

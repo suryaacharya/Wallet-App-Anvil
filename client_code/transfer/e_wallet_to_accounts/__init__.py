@@ -44,6 +44,15 @@ class e_wallet_to_accounts(e_wallet_to_accountsTemplate):
       print(main_money)
     
       if (money_value < 5) or (money_value > 50000):
+        app_tables.transactions.add_row(
+                user=self.user['username'],
+                casa=int(acc),
+                e_wallet=wallet3,
+                money=f"{selected_symbol}-{money_value}",
+                date=current_datetime,
+                transaction_type="E-wallet to Account",
+                proof="failed"
+            )
         self.label_3.text = "Money value should be between 5 and 50000 for a transfer Funds."
       else:
         if selected_symbol == '$':
@@ -95,13 +104,14 @@ class e_wallet_to_accounts(e_wallet_to_accountsTemplate):
                self.label_3.text = "Insufficient funds"
         else:
           self.label_3.text = "Error: Invalid currency symbol selected."
-      new_transaction = app_tables.transactions.add_row(
+        app_tables.transactions.add_row(
                 user=self.user['username'],
                 casa=int(acc),
                 e_wallet=wallet3,
                 money=f"{selected_symbol}-{money_value}",
                 date=current_datetime,
-                transaction_type="E-wallet to Account"
+                transaction_type="E-wallet to Account",
+                proof="success"
             )
       open_form('transfer',user=self.user)
 

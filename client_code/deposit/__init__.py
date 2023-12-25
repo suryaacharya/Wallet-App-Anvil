@@ -83,7 +83,8 @@ class deposit(depositTemplate):
                     e_wallet=wallet3,
                     money=f"{selected_symbol}-{money_value}",
                     date=current_datetime,
-                    transaction_type="Deposit"
+                    transaction_type="Deposit",
+                    proof="success"
                 )
 
                 self.label_2.text = "Money added successfully to the account." #Remaining limit: {}".format(remaining_limit)
