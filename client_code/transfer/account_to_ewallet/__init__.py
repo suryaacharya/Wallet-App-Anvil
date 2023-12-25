@@ -53,7 +53,9 @@ class account_to_ewallet(account_to_ewalletTemplate):
                 transaction_type="Account to E-wallet",
                 proof="failed"  # Assign 'failed' proof for invalid amount
             )
+        
         self.label_15.text = "Money value should be between 5 and 50000 for a transfer Funds."
+      
       else:
         if selected_symbol == '$':  
             if float(user_currency['money_usd']) >= money_value:
@@ -86,7 +88,7 @@ class account_to_ewallet(account_to_ewalletTemplate):
         else:
           self.label_4.text = "Error: Invalid currency symbol selected."
   
-      new_transaction = app_tables.transactions.add_row(
+        app_tables.transactions.add_row(
                 user=self.user['username'],
                 casa=int(acc),
                 e_wallet=wallet3,
